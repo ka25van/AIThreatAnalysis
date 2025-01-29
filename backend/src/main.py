@@ -1,14 +1,17 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 import json
+from dotenv import load_dotenv
 import asyncio
 import random
+import uvicorn
+import os
 import math
 from datetime import datetime, timedelta
 from .anomaly_detection.network_analyzer import NetworkTrafficAnalyzer
 from .threat_intelligence.threat_analyzer import ThreatAnalyzer
 
-
+load_dotenv()
 app = FastAPI()
 
 app.add_middleware(
@@ -92,7 +95,8 @@ async def get_security_summary():
     }
 
 if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))  # Default port 8000 if not in .env
+    host = os.getenv("HOST", "0.0.0.0")  # Default host is 0.0.0.0
+    uvicorn.run(app, host=host, port=port)
 
 
