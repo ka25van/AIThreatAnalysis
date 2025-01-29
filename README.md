@@ -19,3 +19,4 @@ Advantages of This System
           ✅ User-Friendly Dashboard - Easy-to-use interface for monitoring threats.
           ✅ Scalable & Cloud-Ready - Can be deployed in AWS, Azure, or private servers.
           ✅ Customizable & Expandable - Can be improved with WebSockets, AI models, and additional security features.
+![{559E8C98-D314-4ED1-96A5-50651C883212}](https://github.com/user-attachments/assets/3e4484c5-d3a9-4bd4-b9c0-2957a149e57c)
