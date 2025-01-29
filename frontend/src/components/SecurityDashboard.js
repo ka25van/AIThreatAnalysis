@@ -14,7 +14,7 @@ const SecurityDashboard = () => {
 
   // WebSocket connection for real-time updates
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8000/ws/security_feed');
+    const ws = new WebSocket('wss://aithreatanalysis.onrender.com/ws/security_feed');
 
     ws.onopen = () => {
       setIsConnected(true);
@@ -48,7 +48,7 @@ ws.onmessage = (event) => {
   // Function to manually refresh data
   const refreshData = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/security/summary');
+      const response = await fetch('https://aithreatanalysis.onrender.com/api/security/summary');
       const data = await response.json();
       setSecurityData(prevData => ({
         ...prevData,
