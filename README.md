@@ -1,22 +1,29 @@
-This project is an AI-driven cybersecurity system that detects and logs phishing attacks, network intrusions, and other threats in real time. It consists of:
+Data Collection:
+          The system collects network traffic data
+          Monitors incoming and outgoing connections
+          Logs system events and user activities
 
-Frontend (React.js): A dynamic dashboard displaying real-time logs, analytics, and alerts.
-Backend (Node.js & Express.js): Manages log storage, processes requests, and integrates AI models.
-Machine Learning Model (Python, Scikit-Learn): Detects phishing attacks using text classification (TF-IDF & Random Forest).
-Database (MongoDB): Stores threat logs for historical tracking and analysis.
+Analysis Pipeline:
+          Network traffic is analyzed in real-time by the NetworkTrafficAnalyzer
+          The ThreatAnalyzer processes this data using AI models
+          Anomalies are detected using the Isolation Forest algorithm
+          Deep learning models identify potential threats
 
-Where It Can Be Used?
-This cybersecurity system can be implemented in various domains, such as:
-          Corporate Security - Protects organizations from phishing and unauthorized network access.
-          Banking & Finance - Safeguards against fraud attempts in online transactions.
-          Government Agencies - Ensures secure communication and data integrity.
-          Educational Institutions - Prevents cyber threats in school/university networks.
-          E-commerce Platforms - Detects malicious activities targeting customers.
-          
-Advantages of This System
-          ✅ Real-Time Threat Detection - Identifies phishing and intrusions instantly.
-          ✅ AI-Powered Security - Machine Learning enhances detection accuracy.
-          ✅ User-Friendly Dashboard - Easy-to-use interface for monitoring threats.
-          ✅ Scalable & Cloud-Ready - Can be deployed in AWS, Azure, or private servers.
-          ✅ Customizable & Expandable - Can be improved with WebSockets, AI models, and additional security features.
+Visualization Dashboard:
+          Real-time metrics display:
+          Active threats counter
+          Detected anomalies
+          Overall traffic health score
+          Number of active connections
+
+Interactive time-series graph showing:
+          Threat trends over time
+          Anomaly patterns
+          Traffic patterns
+
+Alert System:
+          High-priority threats trigger immediate alerts
+          Anomalies are logged and displayed
+          Traffic patterns are monitored continuously
+
 ![{559E8C98-D314-4ED1-96A5-50651C883212}](https://github.com/user-attachments/assets/3e4484c5-d3a9-4bd4-b9c0-2957a149e57c)
